@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Convert</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="KM">KM</string>
+    <string name="cm">cm</string>
+    <string name="C">C</string>
+    <string name="F">F</string>
+    <string name="in">in</string>
+    <string name="mm">mm</string>
+    <string name="ft">ft</string>
+    <string name="meter">m</string>
+    <string name="kilometers">km</string>
+    <string name="milesperHour">mpH</string>
+    <string name="feetsperHour">fpS</string>
+    <string name="kilometerperHour">kmph</string>
+    <string name="milespersecond">mps</string>
+    <string name="gal_liters">gal/yd^2</string>
+    <string name="liter_meters">l/m^2</string>
+    <string name="in_mile">in/mile</string>
+    <string name="m_km">m/km</string>
+    <string name="miles">mi</string>
+
+
+
+    <string name="imageDesc">convertIcon</string>
+
+</resources>
