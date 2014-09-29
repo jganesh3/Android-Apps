@@ -1,6 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
-
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
@@ -12,12 +11,10 @@
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
         ads:adUnitId="KEY" />
-
-    <HorizontalScrollView
+    <ScrollView
         android:id="@+id/horizontalScrollView2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-
 
         <TableLayout
             android:layout_width="wrap_content"
@@ -29,7 +26,7 @@
 
                 <EditText
                     android:id="@+id/eTdegreeC"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:inputType="numberDecimal|numberSigned" />
@@ -54,7 +51,7 @@
 
                 <EditText
                     android:id="@+id/eTdegreeF"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="6"
                     android:inputType="numberDecimal|numberSigned" />
@@ -224,7 +221,7 @@
                     android:text="@string/ft_mm" />
 
                 <ImageView
-                    android:id="@+id/imageView12"
+                    android:id="@+id/imageView6"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_column="4"
@@ -241,7 +238,7 @@
                     android:inputType="numberDecimal" />
 
                 <TextView
-                    android:id="@+id/eVmeterft"
+                    android:id="@+id/eVmetertoft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="8"
@@ -269,7 +266,7 @@
                     android:text="@string/miles" />
 
                 <ImageView
-                    android:id="@+id/imageView16"
+                    android:id="@+id/imageView22"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_column="4"
@@ -561,7 +558,7 @@
                     android:text="@string/seconds" />
 
                 <ImageView
-                    android:id="@+id/imageView20"
+                    android:id="@+id/imageView12"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_column="5"
@@ -589,5 +586,5 @@
 
 
         </TableLayout>
-    </HorizontalScrollView>
+    </ScrollView>
 </LinearLayout>

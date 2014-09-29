@@ -13,18 +13,28 @@
     <string name="ft">ft</string>
     <string name="meter">m</string>
     <string name="kilometers">km</string>
-    <string name="milesperHour">mpH</string>
-    <string name="feetsperHour">fpS</string>
+    <string name="milesperHour">mph</string>
+    <string name="feetsperHour">fps</string>
     <string name="kilometerperHour">kmph</string>
     <string name="milespersecond">mps</string>
     <string name="gal_liters">gal/yd^2</string>
     <string name="liter_meters">l/m^2</string>
     <string name="in_mile">in/mile</string>
     <string name="m_km">m/km</string>
-    <string name="miles">mi</string>
 
-
-
+    <string name="degree">d</string>
+    <string name="minute">m</string>
+    <string name="seconds">s</string>
     <string name="imageDesc">convertIcon</string>
+    <string name="miles">mi</string>
+    <string name="ft_mm">ft</string>
+    <string name="mm_ft">mm</string>
+    <string name="ft_meter">ft</string>
+    <string name="meter_ft">meter</string>
+
+    <string name="mpa_psi">mpa</string>
+    <string name="psi_mpa">psi</string>
+
+
 
 </resources>
