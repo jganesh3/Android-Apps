@@ -6,12 +6,12 @@
     android:orientation="vertical">
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/adMob"
+        android:id="@+id/gadvs"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="KEY" />
+        ads:adUnitId="ca-app-pub-1215020177374528/7252834734" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView2"
@@ -29,7 +29,7 @@
 
                 <EditText
                     android:id="@+id/eTdegreeC"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:inputType="numberDecimal|numberSigned" />
@@ -54,7 +54,7 @@
 
                 <EditText
                     android:id="@+id/eTdegreeF"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="6"
                     android:inputType="numberDecimal|numberSigned" />
@@ -75,7 +75,7 @@
 
                 <EditText
                     android:id="@+id/eTinch_mm"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:inputType="numberDecimal" />
@@ -99,7 +99,7 @@
 
                 <EditText
                     android:id="@+id/eTmm_inch"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_column="6"
                     android:inputType="numberDecimal" />

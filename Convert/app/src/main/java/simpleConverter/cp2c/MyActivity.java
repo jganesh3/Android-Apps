@@ -12,10 +12,11 @@ import android.widget.EditText;
 
 import com.example.gj.simpleconverter.R;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.drive.internal.ad;
+import com.google.android.gms.ads.InterstitialAd;
+
 
 
 public class MyActivity extends Activity {
@@ -95,6 +96,9 @@ public class MyActivity extends Activity {
 
     TextWatcher txtftTOmeter;
     TextWatcher txtmeterTOfeet;
+
+    private static final String AD_UNIT_ID = "ca-app-pub-1215020177374528/9935918339";
+
 
 
 
@@ -1196,19 +1200,43 @@ public class MyActivity extends Activity {
         }
     }
 
+    private InterstitialAd interstitial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
-        AdView adView = (AdView) this.findViewById(R.id.adMob);
-        //adView.setAdSize(AdSize.SMART_BANNER);
-        //adView.setAdUnitId(AD_ID);
-        //request TEST ads to avoid being disabled for clicking your own ads
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
 
-        eTdegreeC=(EditText) findViewById(R.id.eTdegreeC);
+        AdRequest adRequest1;
+
+        try {
+
+            interstitial = new InterstitialAd(MyActivity.this);
+            interstitial.setAdUnitId(AD_UNIT_ID);
+
+            AdView adView = (AdView) this.findViewById(R.id.gadvs);
+
+            adRequest1 = new AdRequest.Builder().build();
+
+            adView.loadAd(adRequest1);
+
+            interstitial.loadAd(adRequest1);
+
+            interstitial.setAdListener(new AdListener() {
+                public void onAdLoaded() {
+                    // Call displayInterstitial() function
+                    displayInterstitial();
+                }
+            });
+
+            displayInterstitial();
+
+        } catch (Exception e) {
+            Log.d("GJ",e.toString());
+        }
+
+
+            eTdegreeC=(EditText) findViewById(R.id.eTdegreeC);
         eTdegreeF=(EditText) findViewById(R.id.eTdegreeF);
         eTft_meter =(EditText)findViewById(R.id.eTfeet_m);
         eTinch_mm=(EditText)findViewById(R.id.eTinch_mm);
@@ -1266,6 +1294,12 @@ public class MyActivity extends Activity {
     }
 
 
+    private void displayInterstitial() {
+        // If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
+    }
 
 
 
